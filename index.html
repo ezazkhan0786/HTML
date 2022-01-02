@@ -1,43 +1,26 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bulb On OFF project</title>
-    |<link rel="stylesheet" href="index.css">
-</head>
+<html>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
 <body>
-    <h3><big>GOOD MORNING SIR</big></h3>
-    <h2><marquee><q>MD EZAZ KHAN</q></marquee></h2>
- <h1><q>Here is my Bulb control</q></h1>
-<ul> <button onclick="TurnOn()">Turn On</button>   
- <button onclick="TurnOff()">Turn Off</button></ul>
- <div class="bulb-container">
-    <img id="bulb" src="Offbulb.jpg" alt=""/>
- </div>\
- 
- <script>
-     const TurnOn = () => {
-         let imgob = document.getElementById("bulb");
-         imgob.setAttribute("src", "onbulb.jpg");
-     };
-  const TurnOff = () => {
-    let imgob = document.getElementById("bulb");
-         imgob.setAttribute("src", "Offbulb.jpg");
- };
 
- const toggleBulb = () => {
-     let imgOb = document.getElementById('bulb');
-     let srcValue = imgOb.getAttribute('src');
-   if (srcValue == "Offbulb.jpg") {
-       turnon();
+<p>I am students Suresh Gyan Vihar University Jaipur Rajasthan</p>
 
-   }
-   else {
-       turnoff();
-   }
- };
- </script>
+<div ng-app="myApp" ng-controller="myCtrl">
+
+First Name: <input type="text" ng-model="firstName"><br>
+Last Name: <input type="text" ng-model="lastName"><br>
+<br>
+Full Name: {{firstName + " " + lastName}}
+
+</div>
+
+<script>
+var app = angular.module('myApp', []);
+app.controller('myCtrl', function($scope) {
+    $scope.firstName= " ";
+    $scope.lastName= " ";
+});
+</script>
+
 </body>
 </html>
