@@ -3,22 +3,23 @@
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
 <body>
 
-<p>I am students Suresh Gyan Vihar University Jaipur Rajasthan</p>
+<div ng-app="myApp" ng-controller="myCtrl"> 
 
-<div ng-app="myApp" ng-controller="myCtrl">
+<p>The time is:</p>
 
-First Name: <input type="text" ng-model="firstName"><br>
-Last Name: <input type="text" ng-model="lastName"><br>
-<br>
-Full Name: {{firstName + " " + lastName}}
+<h1>{{theTime}}</h1>
 
 </div>
 
+<p>The $interval service runs a function every specified millisecond.</p>
+
 <script>
 var app = angular.module('myApp', []);
-app.controller('myCtrl', function($scope) {
-    $scope.firstName= " ";
-    $scope.lastName= " ";
+app.controller('myCtrl', function($scope, $interval) {
+  $scope.theTime = new Date().toLocaleTimeString();
+  $interval(function () {
+      $scope.theTime = new Date().toLocaleTimeString();
+  }, 1000);
 });
 </script>
 
