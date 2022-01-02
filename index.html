@@ -1,103 +1,43 @@
 <!DOCTYPE html>
-<html lang="en-US">
-<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
- <html>
-   <head>
-     <title>Registration from</title>
-   </head>
- <body>
-  <marquee>My Ragistration Form</marquee>
-   <body style="background-color: cyan;"
-  <h1 style=text-align:center>Registration from</h1>
-  <div ng-app="">
-   <from>
-     <table>
-     <tr>
-       <td>
-         Name:
-       </td>
-       <td>
-         <input type="text" placeholder="Enter your username">
-       </td>
-     </tr>
-     <tr>
-      <td>
-        Phone Number:
-      </td>
-     <td>
-       <input type="phone" placeholder="Enter your mobail no">
-     </td>
-     </tr>
-     <tr>
-       <td>
-         Email id:
-       </td>
-     <td>
-       <input type="email" placeholder="Enter your email id">
-     </td>
-     </tr>
-     <td>
-       Password:
-     </td>
-     <td>
-       <input type="password" placeholder="Enter your password">
-     </td>
-    </tr>
-       <tr>
-           <td>
-         Gander:
-       </td>
-         <td>
-           <input type="radio" name="gender">Male
-           <input type="radio" name="gender">female
-         </td>
-       </tr>
-         <tr>
-             <td>
-               Date of Birth:
-             </td>
-             <td>
-               <input type="date">
-             </td>
-         </tr>
-         <tr>
-           <td>
-             Hobbies:
-           </td>
-         <td>
-           <input type="checkbox" singing>singing
-           <input type="checkbox" criket>criket
-           <input type="checkbox" Dancing>Dancing
-         </td>
-      </tr>
-       <tr>
-         <td>
-            Education Qualification:
-         </td>
-         <td>
-          <select>
-            <option>select option</option>
-            <option>10+2</option>
-            <option>Graduation</option>
-            <option>Postgraduation</option>
-      </select>
-       </td>  
-   </tr>
-      <tr>
-            <td>
-              Address:
-            </td>
-            <td>
-              <textarea row="10" col="30" placeholder="Address"></textarea>
-            </td>
-         </tr>
-         <tr>
-           <td>
-             <input type="submit" value="submit">
-             <input type="reset" value="reset">
-           </td>
-         </tr>
-     </table>
-   </from>
- </body>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bulb On OFF project</title>
+    |<link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <h3><big>GOOD MORNING SIR</big></h3>
+    <h2><marquee><q>MD EZAZ KHAN</q></marquee></h2>
+ <h1><q>Here is my Bulb control</q></h1>
+<ul> <button onclick="TurnOn()">Turn On</button>   
+ <button onclick="TurnOff()">Turn Off</button></ul>
+ <div class="bulb-container">
+    <img id="bulb" src="Offbulb.jpg" alt=""/>
+ </div>\
  
+ <script>
+     const TurnOn = () => {
+         let imgob = document.getElementById("bulb");
+         imgob.setAttribute("src", "onbulb.jpg");
+     };
+  const TurnOff = () => {
+    let imgob = document.getElementById("bulb");
+         imgob.setAttribute("src", "Offbulb.jpg");
+ };
+
+ const toggleBulb = () => {
+     let imgOb = document.getElementById('bulb');
+     let srcValue = imgOb.getAttribute('src');
+   if (srcValue == "Offbulb.jpg") {
+       turnon();
+
+   }
+   else {
+       turnoff();
+   }
+ };
+ </script>
+</body>
+</html>
